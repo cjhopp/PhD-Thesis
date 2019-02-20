@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: '600'
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/Multiplet_150_vs_flow_cum_NM10_losses/Full_final_cat_flow_mags_FMs_depth_NM10_Drilling_12-5_GrowClust_no_diff_ABC.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    folder_url: "/users/77845/articles/325821/master/folder/figures/Multiplet_150_vs_flow_cum_NM10_losses"
+    url: "/users/77845/articles/325821/master/file/figures/Multiplet_150_vs_flow_cum_NM10_losses/Full_final_cat_flow_mags_FMs_depth_NM10_Drilling_12-5_GrowClust_no_diff_ABC.png"

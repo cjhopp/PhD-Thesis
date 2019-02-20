@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: 500px
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/merc_Rot_overview_inset/merc_Rot_overview_struct_inset_NI_compartments.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    folder_url: "/users/77845/articles/349287/master/folder/figures/merc_Rot_overview_inset"
+    url: "/users/77845/articles/349287/master/file/figures/merc_Rot_overview_inset/merc_Rot_overview_struct_inset_NI_compartments.png"

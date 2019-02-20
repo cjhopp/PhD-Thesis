@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: 800
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/Rotokawa_geology_11-20/Rotokawa_geology_11-20.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    folder_url: "/users/77845/articles/336675/master/folder/figures/Rotokawa_geology_11-20"
+    url: "/users/77845/articles/336675/master/file/figures/Rotokawa_geology_11-20/Rotokawa_geology_11-20.png"

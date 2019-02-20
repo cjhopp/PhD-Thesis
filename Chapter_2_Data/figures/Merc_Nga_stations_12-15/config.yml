@@ -1,0 +1,19 @@
+---
+version: 2
+multicolumn: false
+web-width: 500px
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/merc_Nga_stations_12-15/merc_Nga_stations_12-15.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    url: "/users/77845/articles/336681/master/file/figures/merc_Nga_stations_12-15/merc_Nga_stations_12-15.png"

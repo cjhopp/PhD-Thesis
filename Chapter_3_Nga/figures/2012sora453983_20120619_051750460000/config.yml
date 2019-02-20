@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: true
+web-width: 800
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/2012sora453983_20120619_051750460000/det_example_publication.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    folder_url: "/users/77845/articles/325821/master/folder/figures/2012sora453983_20120619_051750460000"
+    url: "/users/77845/articles/325821/master/file/figures/2012sora453983_20120619_051750460000/det_example_publication.png"

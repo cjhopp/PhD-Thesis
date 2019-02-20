@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: 600px
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/Rotokawa_overview_Intro/Rotokawa_overview_Intro.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    url: "/users/77845/articles/336675/master/file/figures/Rotokawa_overview_Intro/Rotokawa_overview_Intro.png"
+    folder_url: "/users/77845/articles/336675/master/folder/figures/Rotokawa_overview_Intro"

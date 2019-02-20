@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: 700px
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/det_example_publication/det_example_publication.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    url: "/users/77845/articles/336681/master/file/figures/det_example_publication/det_example_publication.png"
+    folder_url: "/users/77845/articles/336681/master/folder/figures/det_example_publication"

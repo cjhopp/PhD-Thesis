@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: '600'
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/Multiplet_95_vs_flow_rate/Full_final_cat_flow_WHP_mags_FMs_diffusion_NM08_Stim_II_11-7_GrowClust_no_diffs_lines_gray_labels_12-5.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    folder_url: "/users/77845/articles/325821/master/folder/figures/Multiplet_95_vs_flow_rate"
+    url: "/users/77845/articles/325821/master/file/figures/Multiplet_95_vs_flow_rate/Full_final_cat_flow_WHP_mags_FMs_diffusion_NM08_Stim_II_11-7_GrowClust_no_diffs_lines_gray_labels_12-5.png"

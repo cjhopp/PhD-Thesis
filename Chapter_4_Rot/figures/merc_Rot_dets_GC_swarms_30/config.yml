@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: 700px
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/merc_Rot_dets_GC_swarms_30/merc_Rot_dets_GC_swarms_30.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    url: "/users/77845/articles/349287/master/file/figures/merc_Rot_dets_GC_swarms_30/merc_Rot_dets_GC_swarms_30.png"
+    folder_url: "/users/77845/articles/349287/master/folder/figures/merc_Rot_dets_GC_swarms_30"

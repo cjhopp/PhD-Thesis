@@ -1,0 +1,181 @@
+% Control file for Chet Hopp's PhD thesis
+
+%Thesis outline control file, all elements declared within must be present locally
+\documentclass[a4paper,12pt,twoside,openright,english]{book}
+
+\usepackage{siunitx, booktabs, bm, longtable, multirow}
+\usepackage{latexsym, syntonly, textcomp, amsmath, caption, float}
+\usepackage{blindtext, setspace, rotating, afterpage, natbib, longtable}
+\usepackage{array, abbrevs, titlesec, fancyhdr, sidecap, xcolor}
+\usepackage{chngcntr, threeparttable, etoolbox, babel}
+
+\usepackage[top=2.3cm, inner=3.2cm, bottom=2.3cm, outer=2.3cm]{geometry}
+\usepackage[bookmarks]{hyperref}
+\usepackage[toc,page]{appendix}
+\usepackage[toc,acronym]{glossaries}
+
+
+% \usepackage[hyphens]{url} %break line within long urls
+%in tabular environment: cell of fixed width with wrapping and align left (L), centred (C), aligned right (R)
+%manual breaklines with \newline
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Title formatting
+\titleformat{\chapter}{\Huge\bfseries}{\chaptername\ \thechapter}{0pt}{\vskip 20pt\raggedright}%
+\titlespacing{\chapter}{0pt}{10pt}{<after-sep>}%
+
+% Hyperlink setup here
+\hypersetup{
+    colorlinks=true,
+    linkcolor={red!25!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\pagestyle{fancy}
+
+% Allow appendices within chapters
+\AtBeginEnvironment{subappendices}{%
+\chapter*{Appendix}
+\addcontentsline{toc}{chapter}{Appendices}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+}
+\numberwithin{figure}{chapter}
+\numberwithin{table}{chapter}
+
+% Here we ensure that the chapter and section
+% headings are in lowercase.
+	\renewcommand{\chaptermark}[1]{%
+    	    \markboth{#1}{}}
+	\renewcommand{\sectionmark}[1]{%
+    	    \markright{\thesection\ #1}}
+	\fancyhf{}  % delete current header and footer
+	\fancyhead[LO,RE]{\bfseries\thepage}
+	%\fancyhead[LO]{\bfseries\rightmark}
+	%\fancyhead[RE]{\bfseries\leftmark}
+	\fancyhead[LE]{\emph\textit{\nouppercase{\rightmark}}}
+	\fancyhead[RO]{\emph\textit{\nouppercase{\leftmark}}}
+	\fancyhead[RE]{}
+	\fancyhead[LO]{}
+	\fancyfoot[LE]{\thepage}
+	\fancyfoot[RO]{\thepage}
+	\renewcommand{\headrulewidth}{0.5pt}
+	\renewcommand{\footrulewidth}{0.5pt}
+	\addtolength{\headheight}{3pt} % space for the rule
+	\fancypagestyle{plain}{%
+   \fancyhead{} % get rid of headers on plain pages
+   \renewcommand{\headrulewidth}{0pt} % and the line
+		}
+
+\makeindex
+	%attempt to make chapter headings start higher up
+	\titleformat{\chapter}[hang]{\LARGE\bfseries}{\thechapter}{1em}{}
+	\titlespacing*{\chapter}{0pt}{0.7cm}{1.5cm}
+	\titlespacing*{\section}{0pt}{0.7cm}{0.5cm}
+
+% Load in glossary entries
+\makeglossaries
+\input{glossary}
+
+%% XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Document starts here XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+\begin{document}
+\frontmatter
+
+% Title page setup
+\begin{titlepage}
+\doublespacing
+	\begin{center}
+	\vspace*{2\baselineskip}
+		\textbf{\LARGE{Characterizing microseismicity at Rotokawa and Ngatamariki geothermal fields
+}}
+
+		\vspace*{2\baselineskip}
+		By \vspace*{2\baselineskip}
+		Chet Hopp \vspace*{2\baselineskip}
+ \vspace*{1\baselineskip}
+\singlespacing
+		A thesis\\ submitted to Victoria University of Wellington\\
+		in fulfillment of the requirements for the degree of
+		\\Doctor of Philosophy in Geophysics.\\
+		\vspace*{3\baselineskip}
+		Victoria University Wellington\\2019
+  \end{center}
+\end{titlepage}
+\singlespacing
+\clearpage{\pagestyle{empty}\cleardoublepage} %%no page number, which is wrong, on black page
+
+% Stupid quotes page. Make a mockery of this.
+\thispagestyle{empty} %suppress page number here without suppressing all page headers afterwards
+  \begin{center}
+		\emph{``I was doing plenty wrong, but they done wronger.''}\\
+		\vspace*{1\baselineskip}
+		Richard Petty
+		
+		\vspace*{4\baselineskip}
+		\emph{``Don't point a gun at him. He's an unpaid intern.''}\\
+		\vspace*{1\baselineskip}
+		Steve Zissou
+	\end{center}
+\clearpage{\pagestyle{empty}\cleardoublepage}%hides page number which was wrong
+\frontmatter
+
+% Line spacing specification
+\onehalfspacing
+
+% Abstract page
+%\ResetAbbrevs{all}
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+%\pagestyle{plain}%restart page numbering
+% \include{Abstract/Abstract_resubmitted}
+% \include{Acknowledgements/Acknowledgements_resubmitted}
+
+% Table of contents
+\tableofcontents
+\cleardoublepage
+\listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoftables
+\addcontentsline{toc}{chapter}{\listtablename}
+
+% Call chapter compilation here
+\mainmatter
+	%insert chapters here
+	\cleardoublepage
+	\cleardoublepage
+	\include{Chapter_1_Intro/Chapter_1_v2-18}
+% 	\cleardoublepage
+% 	\include{Chapter_2_Data/Chapter_2_v2-18}
+% 	\cleardoublepage
+% 	\include{Chapter_3_Nga/Chapter_3_v2-18}
+% 	\cleardoublepage
+% 	\include{Chapter_4_Rot/Chapter_4_v2-18}
+% 	\cleardoublepage
+% 	\include{Chapter_5_FMs/Chapter_5_v2-19}
+% 	\cleardoublepage
+% 	\include{Chapter_6_Synthesis/}
+% 	\cleardoublepage
+
+% Make the glossary
+\printglossary[type=\acronymtype,title={Abbreviations and units}]
+\printglossary
+
+% Now appendices
+\begin{appendices}
+% \include{Appendices/}
+
+%%%NO NEED TO INCLUDE ELECTRONIC SUPPLEMENTS INTO TABLE OF CONTENTS
+%\include{Appendix_Electronic/Appendix_TLScloud}
+%\include{Appendix_Electronic/Appendix_RKdata}
+%\include{Appendix_Electronic/Appendix_DFDPdata}
+
+\end{appendices}
+\backmatter
+
+% Bibliography
+\bibliographystyle{agufull}
+\bibliography{Chaps1-4_pinned_citekey}
+\end{document}

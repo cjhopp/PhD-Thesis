@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: '600'
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/Nga_stims_map_depth_beachballs_stress_final_labels_10-5_intrusive_colored/Nga_stims_map_depth_beachballs_stress_GC_labels_12-5_intrusive_colored_dpi300.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    folder_url: "/users/77845/articles/325821/master/folder/figures/Nga_stims_map_depth_beachballs_stress_final_labels_10-5_intrusive_colored"
+    url: "/users/77845/articles/325821/master/file/figures/Nga_stims_map_depth_beachballs_stress_final_labels_10-5_intrusive_colored/Nga_stims_map_depth_beachballs_stress_GC_labels_12-5_intrusive_colored_dpi300.png"

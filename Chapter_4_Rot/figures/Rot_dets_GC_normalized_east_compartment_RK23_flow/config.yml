@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: 400px
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/Rot_dets_GC_normalized_east_compartment_RK23_flow/Rot_dets_GC_four_panel_II-rate-WHP_east_compartment_RK23.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    folder_url: "/users/77845/articles/349287/master/folder/figures/Rot_dets_GC_normalized_east_compartment_RK23_flow"
+    url: "/users/77845/articles/349287/master/file/figures/Rot_dets_GC_normalized_east_compartment_RK23_flow/Rot_dets_GC_four_panel_II-rate-WHP_east_compartment_RK23.png"

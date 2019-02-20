@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: 700px
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/Rot_bval_w_radius_2D_RK23_min100_max300/Rot_bvalues_2D-depth_plots_2-17_labels.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    folder_url: "/users/77845/articles/349287/master/folder/figures/Rot_bval_w_radius_2D_RK23_min100_max300"
+    url: "/users/77845/articles/349287/master/file/figures/Rot_bval_w_radius_2D_RK23_min100_max300/Rot_bvalues_2D-depth_plots_2-17_labels.png"

@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: 500px
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/2012sora451121_dets_cc_example_zoomed/2012sora451121_dets_cc_example_zoomed.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    url: "/users/77845/articles/336681/master/file/figures/2012sora451121_dets_cc_example_zoomed/2012sora451121_dets_cc_example_zoomed.png"
+    folder_url: "/users/77845/articles/336681/master/folder/figures/2012sora451121_dets_cc_example_zoomed"

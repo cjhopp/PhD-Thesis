@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: 1000px
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/mrp_hypoDD_Nga_detections_hypoDD/mrp_DD_Nga_dets_GC_11-28-18.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    folder_url: "/users/77845/articles/325821/master/folder/figures/mrp_hypoDD_Nga_detections_hypoDD"
+    url: "/users/77845/articles/325821/master/file/figures/mrp_hypoDD_Nga_detections_hypoDD/mrp_DD_Nga_dets_GC_11-28-18.png"
