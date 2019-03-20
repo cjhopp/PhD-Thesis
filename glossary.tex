@@ -1,4 +1,8 @@
 % Acronyms and units
+\newacronym{NAP}{NAP}{Nga Awa Purua}
+
+\newacronym{RGEN}{RGEN}{Rotokawa A plant}
+
 \newacronym{WHP}{WHP}{Wellhead Pressure}
  
 \newacronym{DHP}{DHP}{Downhole Pressure}
@@ -13,32 +17,53 @@
 
 \newacronym{t/h}{t/h}{Tonnes per hour}
 
+\newacronym{MWe}{MWe}{Megawatts electrical}
+
+\newacronym{pdf}{pdf}{probability density function}
+
 \newacronym{MPa}{MPa}{Megapascal}
+
+\newacronym{TVZ}{TVZ}{Taup\={o} Volcanic Zone}
+
+\newacronym{PTS}{PTS}{Pressure Temperature Spinner}
+
 
 
 % Termz
-\newglossaryentry{whp_g}
+\newglossaryentry{tracer_test}
+{
+    name=tracer test,
+    description={Procedure in which a radioactive chemical compound, with known half-life, is injected into a reservoir. Production wells are monitored for the arrival of this compound, the arrival time and concentration of which can be used to infer flow properties of the reservoir.}
+}
+
+\newglossaryentry{WHP_g}
 {
     name=wellhead pressure,
-    description={Pressure in a well as measured at the wellhead, (approximately the earth's surface)}
+    description={Pressure in a well as measured at the wellhead, (approximately the earth's surface). Often reported in bar, but here converted to megapascal (MPa) as is the standard for seismology}
 }
  
-\newglossaryentry{dhp_g}
+\newglossaryentry{DHP_g}
 {
     name=downhole pressure,
-    description={Pressure in a well as measured at a given depth by gas-filled tubing or an installed sensor}
+    description={Pressure in a well as measured at a given depth by gas-filled tubing or an installed sensor. Often reported in bar, but here converted to megapascal (MPa) as is the standard for seismology}
 }
 
 \newglossaryentry{flow_rate}
 {
     name=flow rate,
-    description={The volume of fluid being injected into, or extracted from, a well per unit time}
+    description={The volume of fluid being injected into, or extracted from, a well per unit time. Reported in New Zealand as tonnes per hour (t/h)}
 }
 
 \newglossaryentry{II_g}
 {
     name=injectivity index,
     description={A measure of a well's ability to accept a volume of fluid per unit pressure, here reported as t/h/MPa}
+}
+
+\newglossaryentry{injectivity}
+{
+    name=injectivity,
+    description={Shorthand for injectivity index (II; above)}
 }
 
 \newglossaryentry{stimulation}
@@ -62,5 +87,11 @@
 \newglossaryentry{diffusivity}
 {
     name=diffusivity,
-    description={A quantity describing the rate at which fluid particles spread or diffuse}
+    description={A quantity describing the rate at which fluid particles spread or diffuse. Reported as area per unit time (m$^{2}$ / s)}
+}
+
+\newglossaryentry{feedzone}
+{
+    name=feedzone,
+    description={A location of significant permeability in a well. These are the locations into which fluid is inferred to enter or exit the reservoir}
 }

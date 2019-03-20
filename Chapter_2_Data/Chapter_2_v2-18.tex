@@ -1,19 +1,21 @@
 \chapter{Data and Methods}
-Much of this thesis relies on the analysis of earthquake catalogs which, along with raw waveforms, are the basic unit of seismology. A number of methods are used in this thesis, both by me and by colleagues and supervisors, in order to derive a catalog of seismicity from raw, unfiltered waveforms recorded at a seismograph stations. This chapter aims to describe the steps taken to create the earthquake catalog analyzed in each of the subsequent chapters. At its most basic, our earthquake catalog for Rotokawa and Ngatamariki contains information about the time of occurrence, location of the event, magnitude of the event and, in some cases, information about how the fault or fracture slipped (focal mechanisms). What follows is a description of the methods of detection, location, magnitude estimation and focal mechanism determination starting from raw waveforms.
+Much of this thesis relies on the analysis of earthquake catalogs which, along with raw waveforms, are the basis of seismology. A number of methods are used in this thesis, both by me and by colleagues and supervisors, in order to derive a catalog of seismicity from raw, unfiltered waveforms recorded at a seismograph stations. This chapter aims to describe the steps taken to create the earthquake catalog analyzed in each of the subsequent chapters. At its most basic, our earthquake catalog for Rotokawa and Ngatamariki contains information about the time of occurrence, location of the event, magnitude of the event and, in some cases, information about how the fault or fracture slipped (focal mechanisms). What follows is a description of the methods of detection, location, magnitude estimation and focal mechanism determination starting from raw waveforms.
 
-Apart from seismic data, a number of other data streams are used in this thesis for the purpose of assessing the relationship between seismicity and geothermal field operations. These data are touched upon in Chapter 1, but those with the greatest significance to this work will be detailed here. Specifically, well pressure, temperature and flow rate measurements are used extensively both for direct comparison to rates of seismicity and also to make inferences about the reservoir. 
+Apart from seismic data, a number of other data streams are used in this thesis for the purpose of assessing the relationship between seismicity and geothermal field operations. These data are touched upon in Chapter 1, but those with the greatest significance to this work will be detailed here. Specifically, well pressure, temperature and \gls{flow_rate} measurements are used extensively both for direct comparison to rates of seismicity and also to make inferences about the reservoir. 
 
 \section{Data}
 \subsection{Seismic network}
-The seismic data presented in this thesis were recorded on a network of between 15 and 29 seismometers, most of which are concentrated in an area 15 km N-S by 7 km E-W centered around the Rotokawa and Ngatamariki geothermal fields (Figure \ref{322599}). The vast majority of the stations are owned and operated by Mercury NZ Ltd., for the purpose of monitoring the geothermal fields. However, six stations from either Contact Energy (ARAZ, THQ2) or GeoNet, the national seismic network (HRRZ, PRRZ, ALRZ, WPRZ), have been incorporated into this network to improve station coverage.
+The seismic data presented in this thesis were recorded on a network of between 15 and 29 seismometers, most of which are concentrated in an area 15 km N-S by 7 km E-W centered around the Rotokawa and Ngatamariki geothermal fields (Figures \ref{322599} and \ref{continuity}). The vast majority of the stations are owned and operated by Mercury NZ Ltd., for the purpose of monitoring the geothermal fields. However, six stations from either Contact Energy (ARAZ, THQ2) or GeoNet, the national seismic network (HRRZ, PRRZ, ALRZ, WPRZ), have been incorporated into this network to improve station coverage.
 
 GNS Science in Waikarei has been contracted to maintain the seismic network at the geothermal fields, a task which includes quarterly retrieval of data, which is stored locally at each station between servicing trips. As detailed in Table \ref{station_table}, the Mercury-operated stations are 4.5 Hz geophones and the data are sampled at 200 Hz. Three of these stations are borehole instruments (NS12, NS13, NS14), deployed in the center of the Ngatamariki field at depths of between 202 and 514 m. The GeoNet data are sampled at 100 Hz and were downloaded and archived locally at the outset of this project in order to speed up analysis.
 
-As the Rotokawa reservoir has been developed for considerably longer than Ngatamariki, its seismic network (stations named RT) has been in operation for over a decade. Ngatamariki stations began to be installed prior to drilling operations in mid-2012. Network coverage varied with time as certain stations were moved to improve performance or replaced after damage due to livestock or vandalism. Therefore, the network presented in Figure \ref{322599} does not represent the exact geometry for any specific point in time, instead reflecting the locations of instruments that were operational at any point between 2012 and 2015.\selectlanguage{english}
+As the Rotokawa reservoir has been developed for considerably longer than Ngatamariki, its seismic network (stations named RT) has been in operation for over a decade. Ngatamariki stations began to be installed prior to drilling operations in mid-2012. Network coverage varied with time as certain stations were moved to improve performance or replaced after damage due to livestock or vandalism (Figure \ref{continuity}). Therefore, the network presented in Figure \ref{322599} does not represent the exact geometry for any specific point in time, instead reflecting the locations of instruments that were operational at any point between 2012 and 2015.\selectlanguage{english}
+
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/RotNga_stations_overview/RotNga_stations_overview_original}
-\caption{{All stations that were active at any time between 2012 and 2015.
+\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/RotNga_stations_overview/RotNga_stations_overview}
+\caption[Seismograph station map]{{
+All stations that were active at any time between 2012 and 2015.
 Goldenrod shapes indicate the most likely resistivity boundaries for the
 Ngatamariki and Rotokawa geothermal fields, triangles show the locations
 of seismic stations, each of which is labeled with the station name
@@ -22,6 +24,7 @@ appearing in Table 1, below.
 }}
 \end{center}
 \end{figure}\selectlanguage{english}
+
 \begin{table}
 \centering
 \resizebox{\textwidth}{!}{%
@@ -73,9 +76,20 @@ appearing in Table 1, below.
     THQ2 & 176.1698 & -38.6684 & 450.0 & 80.0 & IESE Borehole: Duke 4.5 \\
     WPRZ & 176.1624 & -38.5196 & 519.0 & 0.0 & LE-3DliteMkII \\
 \end{tabular}}
-\caption{{Summary of each station active at any time between 2012 and 2015 at Rotokawa and Ngatamariki. Most stations are owned and operated by Mercury NZ Ltd. However, stations ARAZ and THQ2 are owned and operated by Contact Energy and stations ALRZ, HRRZ, PRRZ and WPRZ are operated by the national seismic network, GeoNet.}}
+\caption[Seismograph station information]{{
+Summary of each station active at any time between 2012 and 2015 at Rotokawa and Ngatamariki. Most stations are owned and operated by Mercury NZ Ltd. However, stations ARAZ and THQ2 are owned and operated by Contact Energy and stations ALRZ, HRRZ, PRRZ and WPRZ are operated by the national seismic network, GeoNet.}}
 \label{station_table}
 \end{table}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/data_continuity/Mercury_data_continuity_3-13}
+\caption[Data continuity]{{
+Data continuity plot for the seismic network detailed in Figure \ref{322599} and Table \ref{station_table}. Gray lines show the period during which each station was operational.
+{\label{continuity}}%
+}}
+\end{center}
+\end{figure}\selectlanguage{english}
 
 \subsection{Preliminary earthquake catalog}\label{GNS_cat}
 As stated above, the initial earthquake catalog was constructed by GNS Science using the software package SeisComP3 \citep{Weber2007}. Event detection was done using a short-term average\slash{long-term average} technique, which records a detection when the ratio of the average amplitude in a user-defined, short-term window to that in a long-term window exceeds a threshold value. Each of these detections was then automatically located using the linearized location algorithm Hypo71 \citep{Lee_1972}. See Sections \ref{STA/LTA} and \ref{linloc} for a detailed description of these techniques.
@@ -90,14 +104,15 @@ where $A$ is the amplitude of the seismic trace in mm and $A0$ is a calibration 
 \begin{table}
 \centering
 \begin{tabular}{cc}
-    {Event-station dist (km)} & {Calibration (mag. units)} \\ \midrule
+    {Event-station dist (km)} & {Calibration A0 (mag. units)} \\ \midrule
     0  & 0.0431 \\
     10  & -1.1563  \\
     50  & -1.5755  \\
     100  & -1.7560  \\
     1000  & -2.3545   \\
 \end{tabular}
-\caption{{Table summarizing the distance correction factors used by GNS Science in calculating the magnitudes of the preliminary earthquake catalog.}}
+\caption[Magnitude calculation distance correction factors]{{
+Table summarizing the distance correction factors used by GNS Science in calculating the magnitudes of the preliminary earthquake catalog.}}
 \label{table_A0}
 \end{table}
 
@@ -105,26 +120,28 @@ The national seismic network, GeoNet, reports location and magnitude information
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/geonet-merc_mag_comp/geonet-merc_mag_comp_original}
-\caption{{Mercury-calculated vs GeoNet calculated magnitudes after applying a
+\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/geonet-merc_mag_comp/geonet-merc_mag_comp}
+\caption[Mercury vs. GeoNet magnitude relationship]{{
+Mercury-calculated vs GeoNet calculated magnitudes after applying a
 static correction of +0.32 magnitude units to the Mercury events.
 {\label{910533}}%
 }}
 \end{center}
 \end{figure}
 
-Following the steps outlined above, GNS Science provided us the Rotokawa\slash{Ngatamariki} earthquake catalog in the form of SeisComP3 native \textit{sc3ml} xml files. This catalog contained 8226 earthquakes that occurred between 15 May 2012 and 18 November 2015 (black events, Figure \ref{955268}). These two dates correspond to the date of the start of the first Ngatamariki seismographs, at which time the Rotokawa and Ngatamariki seismic networks were combined, and the final data-collection date of 2015, respectively. Many of these events occurred outside of the boundaries of the geothermal fields and were therefore marginally applicable to the aims of this thesis. For this reason, we filtered the catalog to include only events that occurred within or adjacent the field boundaries of Rotokawa and Ngatamariki, and also to include events with average pick residuals within one standard deviation of the mean, leaving a total of 4405 events (Figure \ref{955268}). These earthquakes were used as 'template' events in detecting additional events as detailed in Section \ref{MF} below.\selectlanguage{english}
+Following the steps outlined above, GNS Science provided us the Rotokawa\slash{Ngatamariki} earthquake catalog in the form of \textit{SeisComP3} native \textit{sc3ml} xml files. This catalog contained 8226 earthquakes that occurred between 15 May 2012 and 18 November 2015 (black events, Figure \ref{955268}). These two dates correspond to the date of the start of the first Ngatamariki seismographs, at which time the Rotokawa and Ngatamariki seismic networks were combined, and the final data-collection date of 2015, respectively. Many of these events occurred outside of the boundaries of the geothermal fields and were therefore marginally applicable to the aims of this thesis. For this reason, we filtered the catalog to include only events that occurred within or adjacent to the field boundaries of Rotokawa and Ngatamariki, and also to include events with average pick residuals within one standard deviation of the mean, leaving a total of 4405 events (Figure \ref{955268}). These earthquakes were used as 'template' events in detecting additional events as detailed in Section \ref{MF} below.\selectlanguage{english}
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/RotNga_catalog_overview/RotNga_catalog_overview_original}
-\caption{{Overview of earthquakes in the preliminary GNS Science catalog. Red
+\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/RotNga_catalog_overview/RotNga_catalog_overview}
+\caption[GNS template event locations]{{
+Overview of earthquakes in the preliminary GNS Science catalog. Red
 events are those which were selected for use in the analyses detailed in
 the following sections. Gray triangles represent seismograph stations.
 Yellow indicates the boundaries of the Ngatamariki and Rotokawa
 geothermal fields, purple nearby Contact Energy-operated fields, and
 green the protected Orakei-Korako geothermal field. Black lines show
-active faults. Event symbols are scaled by magnitude where the largest
+active faults \citep{AFDB}. Event symbols are scaled by magnitude where the largest
 is magnitude 4.2.
 {\label{955268}}%
 }}
@@ -135,17 +152,18 @@ is magnitude 4.2.
 In this thesis, we make use of a number of additional datasets that have been provided by Mercury. These data record the industrial processes taking place at the fields (such as injection and extraction of fluids) as well as properties of the deep reservoir that can be directly measured or inferred from the limited number of wells. They also provide important constraints for the interpretation of the earthquake catalog throughout this work.
 
 \subsubsection{Injection and production rates}
-The most important supporting datasets are pressure and flow rate time series for all injection and production wells. Specifically, they provide constraint on the reservoir pressures and injected volumes required to trigger or halt nearby seismicity. Flow and pressure time series are sampled daily during normal plant operations at both fields and more frequently during completion\slash{stimulation} tests at Ngatamariki (usually every five minutes). Pressure measurements can be taken either at the wellhead, in which case is they are referred to as wellhead pressure (WHP) or at depth from within the wellbore, which is referred to as downhole pressure (DHP). Example flow rate and pressure data are shown in the introductory chapter.
+The most important supporting datasets are pressure and \gls{flow_rate} time series for all injection and production wells. Specifically, they provide constraints on the reservoir pressures and injected volumes required to trigger or halt nearby seismicity. Flow and pressure time series are sampled daily during normal plant operations at both fields and more frequently during completion\slash{}\gls{stimulation} tests at Ngatamariki (usually every five minutes). Pressure measurements can be taken either at the wellhead, in which case is they are referred to as \gls{WHP_g} (\acrshort{WHP}) or at depth from within the wellbore, which is referred to as \gls{DHP_g} (\acrshort{DHP}). Example \gls{flow_rate} and pressure data are shown in the introductory chapter.
 
 \subsubsection{Pressure-temperature spinner data}
-In practice, fluid does not exit (injection) or enter (production) a well uniformly across its entire length. Differences in permeability, controlled by rock type and fractures\slash{faults} intersecting the well, mean that a well is hydraulically connected to the reservoir only at specific zones. These intervals are referred to as feedzones or permeable zones. In certain cases, operators will install a slotted or perforated liner in the well to dictate specifically where fluid will be able to move into or out of the well, however it is often common in geothermal reservoirs to leave the hole `open' below the casing shoe. Even in the case of a perforated liner, the locations of the principle feedzones are unknown a priori. In order to infer feedzone location, a tool called a pressure-temperature spinner (PTS) is used, which measures flow, pressure and temperature within a well during production or injection. PTS tests are often run as a part of the completion testing of a well (Figure \ref{748181}).\selectlanguage{english}
+In practice, fluid does not exit (injection) or enter (production) a well uniformly across its entire length. Differences in \gls{permeability}, controlled by rock type and fractures\slash{faults} intersecting the well, mean that a well is hydraulically connected to the reservoir only at specific zones. These intervals are referred to as \glspl{feedzone} or permeable zones. In certain cases, operators will install a slotted or perforated liner in the well to dictate specifically where fluid will be able to move into or out of the well, however it is often common in geothermal reservoirs to leave the hole `open' below the casing shoe. Even in the case of a perforated liner, the locations of the principle \glspl{feedzone} are unknown a priori. In order to infer \gls{feedzone} location, a tool called a pressure-temperature spinner (\acrshort{PTS}, essentially an impeller) is used, which measures flow, pressure and temperature within a well during production or injection. \acrshort{PTS} tests are often run as a part of the completion testing of a well (Figure \ref{748181}).\selectlanguage{english}
 
 \begin{sidewaysfigure}[p]
 \begin{center}
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Chapter_2_Data/figures/all_wells_Nga/all_wells_Nga_original}
-\caption{{Pressure-temperature spinner data recorded during completion tests at
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Chapter_2_Data/figures/all_wells_Nga/all_wells_Nga_with_feedzones}
+\caption[Example \acrfull{PTS} datasets]{{
+Pressure-temperature spinner data recorded during completion tests at
 each of the three wells drilled at Ngatamariki in 2012. The blue lines
-indicate temperatures for fluid injected at various static flow rates
+indicate temperatures for fluid injected at various static \glspl{flow_rate}
 and the orange lines represent combinations of measured and interpreted
 natural state temperatures in the reservoir.
 {\label{748181}}%
@@ -153,15 +171,16 @@ natural state temperatures in the reservoir.
 \end{center}
 \end{sidewaysfigure}
 
-For a given flow rate, a strong variation in temperature over some depth interval typically implies that fluid is entering or leaving the well and that the corresponding depth may be a feedzone. In the case of the injection tests shown in Figure \ref{748181}, strong `heating' signals with depth signify that a relatively large volume of cold injectate is moving from the well into the reservoir, leaving hotter, conductively-heated fluid in the wellbore at greater depths. This information constrains the points from which fluid flows, and therefore helps us to interpret where pressure signals originate and how they relate to the characteristics of seismicity.
+For a given \gls{flow_rate}, a strong variation in temperature over some depth interval typically implies that fluid is entering or leaving the well and that the corresponding depth may be a \gls{feedzone}. In the case of the injection tests shown in Figure \ref{748181}, strong `heating' signals with depth signify that a relatively large volume of cold injectate is moving from the well into the reservoir, leaving hotter, conductively-heated fluid in the wellbore at greater depths. This information constrains the points from which fluid flows, and therefore helps us to interpret where pressure signals originate and how they relate to the characteristics of seismicity.
 
 \subsubsection{Image logs}
-In the case of many geothermal reservoirs, including Ngatamariki and Rotokawa, permeability is controlled by the reservoir fracture network. This is because the matrix rock is far less permeable than the typically extensive open fractures \citep{Grant_2011,Cant_2018}. A final important constraint on the locations of well feedzones, as well at the distribution and orientation of fractures over the entire reservoir, are resistivity- and sonic-based image logs. These logs are capable of showing detailed structures that intersect the wellbore including open (permeable) and sealed (impermeable) fractures and help corroborate data obtained from PTS measurements as to the location of feedzones (Figure \ref{746257}). These measurements of reservoir fracture orientations are also useful contraints on the structures available to slip, and therefore help to constrain fault plane ambiguity in focal mechanism results.\selectlanguage{english}
+In the case of many geothermal reservoirs, including Ngatamariki and Rotokawa, \gls{permeability} is controlled by the reservoir fracture network. This is because the matrix rock is far less permeable than the typically extensive open fractures \citep{Grant_2011,Cant_2018}. A final important constraint on the locations of well \glspl{feedzone}, as well at the distribution and orientation of fractures over the entire reservoir, are resistivity- and sonic-based image logs. These logs are capable of showing detailed structures that intersect the wellbore including open (permeable) and sealed (impermeable) fractures and help corroborate data obtained from PTS measurements as to the location of \glspl{feedzone} (Figure \ref{746257}). These measurements of reservoir fracture orientations are also useful contraints on the structures available to slip, and therefore help to constrain fault plane ambiguity in focal mechanism results.\selectlanguage{english}
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/FMI_example_mod/FMI_example_mod_original}
-\caption{{Example interval from the FMI image of Ngatamariki well NM10, showing
+\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/FMI_example_mod/FMI_example_mod}
+\caption[Example wellbore image data]{{
+Example interval from the FMI image of Ngatamariki well NM10, showing
 interpreted fractures as well as other borehole data collected during
 the survey.
 {\label{746257}}%
@@ -181,13 +200,15 @@ A subsequent step in earthquake detection is known as `association', which invol
 As mentioned above, the energy-based detection for this thesis was undertaken by GNS Science using the SeisComP3 software package. Triggering and station magnitude calculation was done using the module \textit{scautopick} and event association using the module \textit{scautoloc}, yielding the starting catalog for the correlation based detection undertaken next.
 
 \subsubsection{Correlation-based (matched filter)}\label{MF}
-Where a stream of seismic data contains high levels of noise (e.g. in areas of extensive industrial activity) or a large number of signals, such as within an aftershock sequence, energy-based detection cannot realistically detect many of the events present in the data. Waveform cross-correlation has been used to overcome these deficiencies in finding known signals is such settings, and has been applied widely to problems including radar, digital communications and astronomy \citep[e.g.][]{Turin_1960,Abbott_2016}.
+Where a stream of seismic data contains high levels of noise (e.g. in areas of extensive industrial activity) or a large number of signals, such as within an aftershock sequence, energy-based detection cannot realistically detect many of the events present in the data. Waveform cross-correlation has been used to overcome these deficiencies in finding known signals in such settings, and has been applied widely to problems including radar, digital communications and astronomy \citep[e.g.][]{Turin_1960,Abbott_2016}. Correlating a known signal with a stream of data in search of a matching signal is often referred to as "matched-filter processing".
 
 In seismology, matched filters have been adopted for use in finding a wide range of repeating and near-repeating signals that had eluded standard energy-based techniques, so long as the signal of interest was known. These applications include detection of local-to-regional scale crustal seismicity \cite{Schaff_2011,Dodge_2015,Chamberlain_2017}, low-frequency and non-volcanic tremor at plate boundaries \citep{Shelly_2007,Chamberlain_2014}, volcanic and volcano-tectonic signals \citep{Shelly_2016,Hotovec_Ellis_2018}, aftershock sequences \citep{Warren_Smith_2017} and explosions \citep{Gibbons_2006,Gibbons_2012}. In all instances, the known signal, be it an earthquake, radar pulse or nuclear explosion is referred to as the `template' and the discovered, previously unknown signals are termed `detections'. Throughout this thesis, we will also use the term `family' to mean all detections generated by a single template. Detections in the same family are shown for template 2012sora451121 in Figures \ref{434259} and \ref{233225}.\selectlanguage{english}
+
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/2012sora451121_dets_cc_example/2012sora451121_dets_cc_example_original}
-\caption{{Detections shown only at station WPRZ for template 2012sora451121 on 15
+\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/2012sora451121_dets_cc_example/2012sora451121_dets_cc_example}
+\caption[Example matched-filter detected waveforms]{{
+Detections shown only at station WPRZ for template 2012sora451121 on 15
 June 2012, during the stimluation of well NM08 (plot is three minutes
 long). The top panel shows template waveforms (red) overlain on
 continuous data (black). The bottom panel shows the cross-correlation
@@ -197,10 +218,13 @@ sum for the entire network in blue with the daily detection threshold
 }}
 \end{center}
 \end{figure}\selectlanguage{english}
+
+
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/2012sora451121_dets_cc_example_zoomed/2012sora451121_dets_cc_example_zoomed_original}
-\caption{{The same plot as above, zoomed into only 30 seconds including three
+\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/2012sora451121_dets_cc_example_zoomed/2012sora451121_dets_cc_example_zoomed}
+\caption[Close-up of matched-filter detections]{{
+The same plot as above, zoomed into only 30 seconds including three
 detections in order to show the waveforms in more detail.
 {\label{233225}}%
 }}
@@ -219,15 +243,17 @@ Here $I'$ represents the continuous seismic data of interest and $T'$ represents
 This cross-correlation coefficient at each seismograph station is then summed to yield the network detection statistic (blue curves, Figures \ref{434259} and \ref{233225}). The threshold for declaring a detection is calculated as the median absolute deviation (MAD) of the detection statistic for the entire period being searched (one day, for instance), multiplied by a user-defined value. In this thesis, we use a detection threshold of MAD $*$ 8, as suggested by \citep{Shelly_2007} (red dotted line, Figures \ref{434259} and \ref{233225}).
 
 The template waveforms used in our matched-filter routine are one second long, starting 0.1 seconds before the P-pick, when present. During the energy-based detection, P-picks were only made on vertical channels. Therefore, templates consist of only vertical channel waveforms (e.g. red waveforms in Figure \ref{249518}, \ref{434259} and \ref{233225}). Horizontal channels are not used due to the large uncertainties for the automatic S-picks in the GNS Science catalog. However, a length of one second ensures that both the P- and S-arrival are included in the template for each event due to the short travel times between events and stations at the geothermal fields (Figure \ref{955268}). A length of one second also omits much of the coda, which is incoherent, even between highly-similar sources. This is especially apparent at Ngatamariki and Rotokawa, due to the highly-fractured reservoir, large variations in the volcanic geology (e.g.\ welded ignimbrites and ashfall deposits) and surface-deposit heterogeneity. After applying an anti-aliasing filter, waveforms were resampled at 50 Hz and filtered from 3.0 to 20.0 Hz to accommodate the high corner frequencies of events with event-station distances of \textless15 km. Continuous seismic data were processed in an identical manner to the templates.\selectlanguage{english}
+
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.98\columnwidth]{Chapter_2_Data/figures/det_example_publication/det_example_publication_original}
-\caption{{Example detections of two events by template 2012sora469246
+\includegraphics[width=0.98\columnwidth]{Chapter_2_Data/figures/det_example_publication/det_example_publication}
+\caption[High and low signal-to-noise ratio detections]{{
+Example detections of two events by template 2012sora469246
 (signal-to-noise ratio of $\sim$50 and $\sim$3
 respectively). The 1 s templates (in red) are overlain on 10 s of
 continuous data around the time of detection (black). The ML 0.62
 template event occurred on 22 June 2012 and detected mostly events that
-occurred during the stimulation of well NM08 between 6 June and early
+occurred during the \gls{stimulation} of well NM08 between 6 June and early
 July. The detection on the left represents a detection of a separate,
 yet highly-similar, template event (template 2012sora469256) which
 occurred approximately ten minutes after the template event shown here.
@@ -247,9 +273,9 @@ The most computationally efficient, and widely-used method for solving the non-l
 t_i = T + \frac{1}{v}\sqrt[]{(X - x_i)^2 + (Y - y_i)^2 + (Z - z_i)^2}
 \end{equation}
 
-where $t_i$ is the arrival time of the ray traveling between the earthquake and recording station $i$, $T$ is the source time of the earthquake, $(X, Y, Z)$ are the longitude, latitude and elevation of the earthquake and $(x_i, y_i, z_i)$ are the longitude, latitude and elevation of station $i$.
+where $t_i$ is the arrival time of the ray traveling between the earthquake and recording station $i$, treating the earth as a homogeneous half-space with wave speed $v$. $T$ is the source time of the earthquake, $(X, Y, Z)$ are the longitude, latitude and elevation of the earthquake and $(x_i, y_i, z_i)$ are the longitude, latitude and elevation of station $i$.
 
-Using the above equation, the arrival time at each station can be calculated by `guessing' a starting location, $(X, Y, Z)$, and origin time, $T$. The difference between the known arrival time at a given station, ${t_i}^obs$, and the calculated arrival time, ${t_i}^calc$, (often referred to as the `misfit' or `time residual', $r_i$) defines the quality of the chosen starting location:
+Using the above equation, the arrival time at each station can be calculated by `guessing' a starting location, $(X, Y, Z)$, and origin time, $T$. The difference between the known arrival time at a given station, ${t_i}^{obs}$, and the calculated arrival time, ${t_i}^calc$, (often referred to as the `misfit' or `time residual', $r_i$) defines the quality of the chosen starting location:
 
 \begin{equation}
 r_i = {t_i}^{calc} - {t_i}^{obs}
@@ -296,43 +322,42 @@ For this thesis, the original linearized locations are calculated in SeisComP3 v
     20.0  & 6.9  \\
     50.0 & 7.43   \\
 \end{tabular}
-\caption{{Local 1-D velocity model for Ngatamariki and Rotokawa from VELEST inversions}}
+\caption[1-D velocity model used in this thesis]{{
+Local 1-D velocity model for Ngatamariki and Rotokawa from VELEST inversions}}
 \label{vmod}
 \end{table}
 
 \subsubsection{Non-linear methods}
-In cases where the velocity model is poorly known, velocity structure is highly-variable, earthquake locations are shallow or are outside of the seismic network, the linearization approaches described above may be insufficient to address to location problem \citep{thurber1985nonlinear}. In this case, the second order terms corresponding to the first-order Taylor series expansion described in Equation \ref{eq:3} must be included. These terms are expressed as second-order partial differentials. For example:
+In cases where the velocity model is poorly known, velocity structure is highly-variable, earthquake locations are shallow or are outside of the seismic network, the linearization approaches described above may be insufficient to address a more highly-nonlinear location problem \citep{thurber1985nonlinear}. In this case, a number of additional approaches may be used. \citet{thurber1985nonlinear}, for example, suggested including the second order terms corresponding to the first-order Taylor series expansion described in Equation \ref{eq:3}. These second-order terms can be especially important for shallow earthquakes located within a local seismic network and for short source-receiver paths. Foregoing linearization completely, \citet{tarantola1982inverse} suggested a probabilistic approach whereby the posterior \acrfull{pdf}, $Q$, of the four unknown parameters (i.e. three spatial dimensions plus time) is described by \citep{Lomax_2014}:
 
 \begin{equation}
-\frac{\partial^{2}{t}}{\partial{Z}^{2}} = \frac{1}{vS}\left[1 - \frac{(Z - z_{i})^{2}}{S^2}\right]
+    Q(\mathbf{m}) = k\:p(\mathbf{m}) \int_{\mathbf{D}}^{} \frac{p(\mathbf{d})F(\mathbf{d},\mathbf{m})}{\mu(\mathbf{d},\mathbf{m})} d\mathbf{d}
 \end{equation}
 
-\begin{equation}
-\frac{\partial^{2}t}{\partial{Y}\partial{Z}} = \frac{(Y - y_i)(Z - z_i)}{vS^3}
+where $k$ is a normalization constant, $\mathbf{m}$ is the vector of unknown hypocentral parameters, $\mathbf{d}$ is the vector of observed arrival-time data, $p(\mathbf{d})$ is the \acrshort{pdf} describing the arrival-time uncertainties and $p(\mathbf{m})$ represents prior information about the hypocenter (e.g. from damage reports or known fault parameters). $F(\mathbf{d},\mathbf{m})$ is the ability of the forward problem to describe the arrival times and $\mu(\mathbf{d},\mathbf{m})$ is the homogeneous distribution over the arrival time data and hypocentral parameters \citep{Lomax_2014}. The integral over the dataspace, $\mathbf{D}$ is typically referred to as the `likelihood function', $L(\mathbf{x})$, and describes how well the given hypocenter represents the data.
+
+For this thesis we have chosen to use the location program \textit{NonLinLoc} \citep{Lomax_2000}, which makes use of the solution presented above and uses one of a number of grid search algorithms to interrogate one of two possible likelihood functions, $L(\mathbf{x})$, one based on an L2-norm misfit function \citep{tarantola1982inverse} and the other given by Equation \ref{likelihood}. We have chosen to use this `equal-differential time' likelihood function as it is more robust to outliers in the arrival time data \citet{Lomax_2014}:
+
+\begin{equation}\label{likelihood}
+    L(\mathbf{x}) = \Bigg[\sum_{a,b}^{}\frac{1}{\sigma_{a}^{2} + \sigma_{b}^{2}} \cdot \exp \Bigg(-\frac{\{[T_{a}^{o} - T_{b}^{o}] - [TT_{a}^{c}(\mathbf{x}) - TT_{b}^{c}(\mathbf{x})]\}^{2}}{\sigma_{a}^{2} + \sigma_{b}^{2}}\Bigg)\Bigg]^{N}
 \end{equation}
 
-\begin{equation}
-\frac{\partial^{2}t}{\partial{X}\partial{Z}} = \frac{(X - x_i)(Z - z_i)}{vS^3}
-\end{equation}
+where $\mathbf{x}$ are the three spatial parameters of $\mathbf{m}$. The sum is taken over all possible ($N$) observation pairs, $a$ and $b$, where $T_{a}^{o}$ and $T_{b}^{o}$ are the observed arrival times and $TT_{a}^{c}$ and $TT_{b}^{c}$ are the calculated travel times (arrival time minus the time of the event) for each observation, respectively. $\sigma_{a}$ and $\sigma_{b}$ represent the uncertainties of the observed arrivals times and calculated travel times \citep{Lomax_2014}. The likelihood function maximizes where the difference in arrival times, $[T_{a}^{o} - T_{b}^{o}]$, and difference in calculated travel times, $[TT_{a}^{c}(\mathbf{x}) - TT_{b}^{c}(\mathbf{x})]$, are equal, corresponding to the point in space, $\mathbf{x}$, that best represents observations $a$ and $b$. After summing over all possible pairs, the resulting \acrshort{pdf} has maxima at the spatial locations that satisfy the largest number of observation pairs, but does not attempt to fit all observations at once, making it more robust in the presence of arrival-time outliers. This formulation also eliminates the calculation of the event origin time, reducing the the location problem from four to three dimensions \citep{Lomax_2014}. 
 
-with the remaining latitude and longitude (x, y) terms taking similar forms to those above.
-
-These second-order terms become especially important for shallow earthquakes located within a local seismic network and for short source-receiver paths, exactly the situation presented by the seismicity at Rotokawa and Ngatamariki. Given the high degree of nonlinearity for the seismic catalog at the geothermal fields, we have chosen to relocate both template and detected events with the program \textit{NonLinLoc} \citep{Lomax_2000}.
-
-\textit{NonLinLoc} first computes the travel times to all stations for each node in a user-defined grid. As the user may then attempt to solve the location problem using a number of approaches, we selected the OctTree griding approach for all events at Rotokawa and Ngatamariki. The OctTree approach first calculates the probability that the source lies within any node in a coarse grid encompassing the entire, user-defined search area. This probability is proportional to the volume of the node and inversely proportional to the travel-time misfit calculated at its center \citep{Lomax_2000}. The highest-probability node is then divided into eight equal-volume sub-nodes and the process is repeated, dividing the most likely of the sub-nodes into eight and continuing this process until a threshold is reached and the maximum-likelihood hypocenter found. Typically, the threshold for halting the program is a minimum node volume. \textit{NonLinLoc} then samples the resulting OctTree structure of searched nodes in order to provide a representation of the location probability density function, which can then be used to characterize the uncertainty in the hypocenter solution \citep{Lomax_2000}.
+\textit{NonLinLoc} first computes the travel times to all stations for each node in a user-defined grid. As the user may then attempt to solve the location problem using a number of gridding approaches, we selected the OctTree gridding method for all events at Rotokawa and Ngatamariki. The OctTree approach first calculates the probability that the source lies within any node in a coarse grid encompassing the entire, user-defined search area. This probability is proportional to the volume of the node and inversely proportional to the travel-time misfit calculated at its center \citep{Lomax_2000}. The highest-probability node is then divided into eight equal-volume sub-nodes and the process is repeated, dividing the most likely of the sub-nodes into eight and continuing this process until a threshold is reached and the maximum-likelihood hypocenter found. Typically, the threshold for halting the program is a minimum node volume. \textit{NonLinLoc} then samples the resulting OctTree structure of searched nodes in order to provide a representation of the location probability density function, which can then be used to characterize the uncertainty in the hypocenter solution \citep{Lomax_2000}.
 
 \subsubsection{Relative location methods}
 Perhaps the most significant uncertainty inherent in the location problem is that associated with the subsurface velocity structure. In an attempt to minimize the effect this uncertainty has on calculated locations, relative location methods have been developed, the most widely used of which is the double-difference method. Instead of minimizing the misfit between observed and calculated arrival times for a single event, double-difference techniques seek to minimize the misfit between the observed and calculated arrival time \textit{differences} between two paired events (hence, double-difference). The most popular of the double-difference location programs is \textit{HypoDD} \citep{Waldhauser_2000}, which attempts to solve the (oftentimes large) system of equations defining a web of interconnected pairs of events by minimizing the L2 norm of the double-differences.
 
-A recent, alternative approach to the double-difference problem was developed by \citet{Trugman_2017}, which we use for the final relocations of the catalogs presented in this thesis. The \textit{GrowClust} algorithm makes use of the same data as \textit{HypoDD}, namely travel-time differences between pairs of events, as well as absolute travel time data and starting locations. However, instead of attempting to solve the entire system of equations defined by every event pair, \textit{GrowClust} creates a list of event pairs in order of descending similarity (defined as the sum of the cross-correlation coefficients between their common waveforms). It then relocates each event pair, or cluster pair where an event pair joins two preexisting clusters, relative to each other by minimizing the L1 norm (which is more robust to outliers than the L2 approach). Finally, \textit{GrowClust} also includes location error estimates via an iterative bootstrapping procedure that randomly resamples the input data and relocates the catalog. The location uncertainty is reported as the median absolute deviation of each event's location for each of the $n$ user-defined bootstrap iterations.
+A recent, alternative approach to the double-difference problem is the \textit{GrowClust} algorithm developed by \citet{Trugman_2017}, which we use for the final relocations of the catalogs presented in this thesis. The \textit{GrowClust} algorithm makes use of the same data as \textit{HypoDD}, namely travel-time differences between pairs of events, as well as absolute travel time data and starting locations. However, instead of attempting to solve the entire system of equations defined by every event pair, \textit{GrowClust} creates a list of event pairs in order of descending similarity (defined as the sum of the cross-correlation coefficients between their common waveforms). It then relocates each event pair, or cluster pair where an event pair joins two preexisting clusters, relative to each other by minimizing the L1 norm (which is more robust to outliers than the L2 approach). Finally, \textit{GrowClust} also includes location error estimates via an iterative bootstrapping procedure that randomly resamples the input data and relocates the catalog. The location uncertainty is reported as the median absolute deviation of each event's location for each of the $n$ user-defined bootstrap iterations.
 
 Application of these relative location techniques often proves imperative to obtaining precise locations, thus illuminating small-scale structures and migration of seismicity with time. Without these techniques, it can be difficult to interpret location results with any degree of confidence, especially at scales of \textless{10}km, as at Rotokawa and Ngatamariki.
 
 \subsection{Magnitude calculation}
-The calculation of earthquake magnitude is typically done in conjunction with its detection and location and is the final, key parameter required for analysis of any earthquake catalog. There are a number of ways in which earthquake magnitude is calculated, usually based on the measured maximum amplitude of a signal recorded at a number of seismograph stations, but can also be based on other measurements such as signal duration or full moment tensor inversion \citep{Kanamori_1983}. In this thesis, magnitudes for the GNS-located template events are reported at local magnitudes (M$_L$), and discussed in detail in Section \ref{GNS_cat}.
+The calculation of earthquake magnitude is typically done in conjunction with its detection and location and is the final, key parameter required for analysis of any earthquake catalog. There are a number of ways in which earthquake magnitude is calculated, usually based on the measured maximum amplitude of a signal recorded at a number of seismograph stations, but it can also be based on other measurements such as signal duration or full moment tensor inversion \citep{Kanamori_1983}. In this thesis, magnitudes for the GNS-located template events are reported at local magnitudes (M$_L$), and discussed in detail in Section \ref{GNS_cat}.
 
 To compute the magnitude of the events detected by the matched filter,
-we use the method described by \citet{Shelly_2016}, which uses pair-wise relative amplitudes between a template event and each of its detections to compute relative moments. This approach computes the relative amplitude, $\alpha$, as
+we use the method described by \citet{Shelly_2016}, which uses pair-wise relative amplitudes between a template event and each of its detections to compute relative moments (Figure \ref{svd_mags}). This approach computes the relative amplitude, $\alpha$, as
 
 \begin{equation}
 \alpha = v[2] / v[1]
@@ -344,11 +369,21 @@ where $v[2]$ and $v[1]$ are the second and first elements, respectively, of the 
 M = U\Sigma V'
 \end{equation}
 
-where $M$ is the singular value decomposition of a data matrix containing both the template and the detected waveform on a single channel. The rows of $V'$ are the right singular vectors, which map the weight of the left singular vectors, $U$, to the original data vectors. Because the template and detected waveforms in the data matrix are inherently similar, the first left singular vector, $U_0$, should describe only a difference in amplitude between template and detection. The relative amplitude between the two events can therefore be estimated as the ratio of the second and first elements, $v[2]$ and $v[1]$, of the first row of $V'$.
+representing the singular value decomposition of a data matrix, $M$, with columns comprising both the template and the detected waveform on a single channel (Figure \ref{svd_mags}). The rows of $V'$ are the right singular vectors, which map the weight of the left singular vectors, $U$, to the original data vectors and $\Sigma$ is a set of nonnegative singular values. Because the template and detected waveforms in the data matrix are inherently similar, the first left singular vector, $U_0$, should describe only a difference in amplitude between template and detection. The relative amplitude between the two events can therefore be estimated as the ratio of the second and first elements, $v[2]$ and $v[1]$, of the first row of $V'$.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.98\columnwidth]{Chapter_2_Data/figures/mag_calc_example/mag_calc_example_2012sora451121}
+\caption[Relative amplitude calculation]{{
+Illustration of the relative amplitude calculation between template and detected events with real waveforms and values. The matrix, \textbf{M}, is the data matrix, in our case with the waveforms as columns. The singular value decomposition comprises the left singular vectors (as columns of $U$), the corresponding eigenvalues, ($\Sigma$; not shown) and the right singular vectors (as rows of $V'$). The columns of $U$ effectively describe the signal that both the template and detection have in common, with decreasing importance from left to right. The rows of $V'$ represent the contribution of the columns of $U$ to each column of $M$. As the template and detected waveforms are inherently similar, the first column of $U$ describes the bulk of their signals and therefore the first row of $V'$ describes their relative amplitudes.
+{\label{svd_mags}}%
+}}
+\end{center}
+\end{figure}
 
 We calculate relative amplitudes only when the cross-correlation coefficient between the template and detection exceeds 0.6 at any given station. Again, we note that template events only contain waveforms for the vertical channels. For those events recorded by a minimum of four stations exceeding the correlation threshold, we calculate the relative moment as the median of the relative amplitudes, following \citet{Shelly_2016}. We note that, because the relative amplitudes are calculated from two waveforms recorded at the same station, there is no need to remove the instrument response.
 
-This approach has proven to be more robust in the presence of relatively dissimilar waveforms than the method of \citet{Rubinstein_2010}, which assumes high correlation coefficients between all events in a family (e.g.\ $\geq$0.85). At Rotokawa and Ngatamariki, scattering and attenuation effects produce waveforms exhibiting lower degrees of similarity than typical repeating or near-repeating seismicity (e.g.\ along the San Andreas \citep{Rubinstein_2010}).
+This approach has proven to be more robust in the presence of relatively dissimilar waveforms than the method of \citet{Rubinstein_2010}, for example, which assumes high correlation coefficients between all pairs of events in a family (e.g.\ $\geq$0.85) instead of simply between a template and each single detection, as assumed here. At Rotokawa and Ngatamariki, scattering and attenuation effects produce waveforms exhibiting lower degrees of similarity than typical repeating or near-repeating seismicity (e.g.\ along the San Andreas \citep{Rubinstein_2010}).
 
 We use the GNS Science $M_{L}$ (as described in Section \ref{GNS_cat}) to calibrate the relative moment calculations from the method above and produce $M_{L}$ estimates for the matched-filter detections. This is done by first converting the template $M_{L}$ to $M_{w}$ using the scaling relationship \citep{Ristau_2009}:
 
@@ -367,70 +402,4 @@ Knowing the relative moment of the template event from the procedure outlined ab
 \subsection{Focal mechanisms}
 The final step taken in developing the earthquake catalog presented here is the determination of earthquake focal mechanism solutions. The shear displacement on a fault is often represented as a point acted on by two perpendicular force couples (the so-called double-couple source), by ignoring any potential volumetric changes associated with the event \citep{stein_2000}. The energy radiated by such a double-couple source can be divided into four quadrants: two dilational and two compressional. At a given seismic station, the ground displacement from an arriving P-wave depends on which of the quadrants the path between the source and receiver emanated from. If that path emanated from a compressional quadrant the ground will move upwards, and if the path emanated from a dilational quadrant, the ground will move downwards. Therefore, by observing the pattern of first motion polarities (up or down) recorded across a seismic network, constraints can be placed on the orientation of the fault that slipped and the direction of slip associated with the corresponding earthquake \citep{stein_2000}.
 
-A number of approaches have been developed to invert polarity recordings for the source properties of an earthquake, typically by forward modeling a large number of possible sources to find the mechanism which best fits the polarity observations \citep[e.g.][]{Reasenberg_1985,Hardebeck_2002}. The focal mechanism solutions presented in this thesis were calculated using the Bayesian approached developed by \citet{Walsh_2009}, which allows for the incorporation of known uncertainties in the input parameters (e.g. earthquake location and first arrival picks) and outputs a PDF of the focal mechanism solution.
-
-\section{Appendices}
-\subsection{Subspace Detection}
-Although not incorporated into the results presented in the following chapters, we have undertaken work in developing and implementing functionality for additional detection techniques not detailed above. Specifically, we have developed functionality for the use of subspace detection of repeating and near-repeating seismicity, which we summarize below.
-
-Matched-filter detection techniques are computationally expensive when applied
-across large datasets. The expense is multiplied as more earthquakes are added
-to the list of template events (referred to by \citet{Barrett_2014} as a `design set') and as larger seismograph networks with more channels of data are used. At the same time, it is important that a set of template events effectively represent the variety of sources present in a given study area or risk missing what might be important seismicity. Subspace detection has been used to address these considerations by expressing clusters of similar events as single matrices known as subspace detectors \citep[for example][]{Harris_2006a,Harris_2006, Barrett_2014,Chambers_2015}.
-
-\subsubsection{Subspace detector design}
-As outlined by \citet{Harris_2006a}, there are five main steps in constructing a series of subspace detectors from a catalog of earthquakes:
-\begin{enumerate}
-    \item Generate a distance matrix for all events by calculating, pairwise, the correlations between events in the catalog. Each element of the distance matrix, $D_{x, y}$ is equivalent to $1 - R(x, y)$ where $R(x, y)$ is the cross correlation value between events $x$ and $y$ (see Equation \ref{eq:3}).
-    \item Cluster the events in the catalog based on this distance matrix. \citet{Harris_2006a} suggest a single-link agglomerative heirarchical clustering algorithm. Each cluster is then referred to as the design set for a single subspace detector.
-    \item For each cluster, align the waveforms by cross correlation and trim the waveforms such that the first arrival occurs at the same point for each trace. Each waveform defines a column, $i$, of the data vector, $\underline{X}$.
-    \item Calculate the orthonormal basis, $\underline{W}$, for the space defined by the design set, $\underline{X}$:
-
-    \begin{equation}
-    \underline{X} = \underline{W} \underline{\Sigma} \underline{V}^{T}
-    \end{equation}
-    
-    \item Determine a satisfactory dimension $d$ such that the subspace defined by $\underline{W}_{d}$ approximates the waveforms in the design set:
-    
-    \begin{equation}
-    \underline{X} \sim \underline{W}_{d} \underline{\Sigma}_{d} \underline{V}_{d}^{T}
-    \end{equation}
-    
-    $W_{d}$ is our subspace detector and the matrix:
-    
-    \begin{equation}
-    \underline{A}_{d} = \underline{\Sigma}_{d}\underline{V}_{d}^{T}
-    \end{equation}
-    
-    gives the relative importance of each dimension, $d$, of $\underline{W}_{d}$ in describing the design set, $\underline{X}$.
-\end{enumerate}
-
-\subsubsection{Detection statistic}
-Following the notation above, the detection statistic is defined as the following:
-
-\begin{equation}
-c[n] = \frac{\underline{x}_{p}^{T}[n]\underline{x}_{p}[n]}{\underline{x}^{T}[n]\underline{x}[n]}
-\end{equation}
-
-where $\underline{x}[n]$ is the data vector within the moving detection window and $\underline{x}_{p}[n]$ is the projection of $\underline{x}[n]$ onto the space defined by the subspace detector such that:
-
-\begin{equation}
-\underline{x}_{p}[n] = \underline{W}_{d}\underline{W}_{d}^{T}\underline{x}[n]
-\end{equation}
-
-This defines the ratio of the energy in the projected data $x_{p}[n]$ to the energy in the original data, $x[n]$ within the detection window $[n]$, which moves through the data period of interest one sample at a time.
-
-\subsubsection{Determining a sufficient dimension}
-Typically, the necessary number of dimensions in a subspace detector is determined empirically, using a plot such as Figure \ref{425783}, which shows the percentage of energy captured by the detector for all design set events with increasing dimensionality. For instance, \citet{Chambers_2015} stipulate that the desired dimension, $d$, is the smallest dimension for which the subspace detector, $\underline{W}_{d}$ captures an average of 90\% of the energy for all events in the design set, $\underline{X}$.\selectlanguage{english}
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=0.70\columnwidth]{Chapter_2_Data/figures/Harris_2006_fig8/Harris_2006_fig8_original}
-\caption{{Adapted from Harris et al. (2006), showing the percentage energy capture
-by a subspace detector with increasing dimensionality. Gray lines show
-energy capture for each event in the design set used to construct the
-detector and the solid red line shows the average across all events. The
-dotted red lines indicate the dimension (n=9) corresponding to an
-average energy capture of 90\%.
-{\label{425783}}%
-}}
-\end{center}
-\end{figure}
+A number of approaches have been developed to invert polarity recordings for the fault plane orientation of an earthquake, typically by forward modeling a large number of possible sources to find the mechanism which best fits the polarity observations \citep[e.g.][]{Reasenberg_1985,Hardebeck_2002}. The focal mechanism solutions presented in this thesis were calculated using the Bayesian approached developed by \citet{Walsh_2009}, which allows for the incorporation of known uncertainties in the input parameters (e.g. earthquake location and first arrival picks) and outputs a \acrshort{pdf} of the focal mechanism solution.

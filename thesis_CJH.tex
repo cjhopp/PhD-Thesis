@@ -111,14 +111,16 @@
 % Stupid quotes page. Make a mockery of this.
 \thispagestyle{empty} %suppress page number here without suppressing all page headers afterwards
   \begin{center}
-		\emph{``I was doing plenty wrong, but they done wronger.''}\\
-		\vspace*{1\baselineskip}
-		Richard Petty
-		
 		\vspace*{4\baselineskip}
-		\emph{``Don't point a gun at him. He's an unpaid intern.''}\\
+		\emph{``Esta vida es igual que un libro, cada p\'{a}gina es un d\'{i}a vivido.''}\\
 		\vspace*{1\baselineskip}
-		Steve Zissou
+		Luis Enrique
+
+		\vspace*{4\baselineskip}
+		\emph{``There is no bag limit on happiness.''}\\
+		\vspace*{1\baselineskip}
+		Ted Nugent
+
 	\end{center}
 \clearpage{\pagestyle{empty}\cleardoublepage}%hides page number which was wrong
 \frontmatter
@@ -127,11 +129,11 @@
 \onehalfspacing
 
 % Abstract page
-%\ResetAbbrevs{all}
-%\clearpage{\pagestyle{empty}\cleardoublepage}
-%\pagestyle{plain}%restart page numbering
-% \include{Abstract/Abstract_resubmitted}
-% \include{Acknowledgements/Acknowledgements_resubmitted}
+\ResetAbbrevs{all}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\pagestyle{plain}%restart page numbering
+\include{Abstract/abstract}
+\include{Acknowledgements/acknowledgements}
 
 % Table of contents
 \tableofcontents
@@ -147,32 +149,27 @@
 	\cleardoublepage
 	\cleardoublepage
 	\include{Chapter_1_Intro/Chapter_1_v2-18}
-% 	\cleardoublepage
-% 	\include{Chapter_2_Data/Chapter_2_v2-18}
-% 	\cleardoublepage
-% 	\include{Chapter_3_Nga/Chapter_3_v2-18}
-% 	\cleardoublepage
-% 	\include{Chapter_4_Rot/Chapter_4_v2-18}
-% 	\cleardoublepage
-% 	\include{Chapter_5_FMs/Chapter_5_v2-19}
-% 	\cleardoublepage
-% 	\include{Chapter_6_Synthesis/}
-% 	\cleardoublepage
-
-% Make the glossary
-\printglossary[type=\acronymtype,title={Abbreviations and units}]
-\printglossary
+	\cleardoublepage
+	\include{Chapter_2_Data/Chapter_2_v2-18}
+	\cleardoublepage
+	\include{Chapter_3_Nga/Chapter_3_v2-18}
+	\cleardoublepage
+	\include{Chapter_4_Rot/Chapter_4_v2-18}
+	\cleardoublepage
+	\include{Chapter_5_FMs/Chapter_5_v2-19}
+	\cleardoublepage
+	\include{Chapter_6_Synthesis/Chapter_6_v3-7}
+	\cleardoublepage
 
 % Now appendices
 \begin{appendices}
-% \include{Appendices/}
-
-%%%NO NEED TO INCLUDE ELECTRONIC SUPPLEMENTS INTO TABLE OF CONTENTS
-%\include{Appendix_Electronic/Appendix_TLScloud}
-%\include{Appendix_Electronic/Appendix_RKdata}
-%\include{Appendix_Electronic/Appendix_DFDPdata}
-
+\include{Appendices/EQcorrscan/EQcorrscan}
 \end{appendices}
+
+% Make the glossary
+\printglossary[type=\acronymtype,title={Abbreviations and units},nonumberlist]
+\printglossary[nonumberlist]
+
 \backmatter
 
 % Bibliography
